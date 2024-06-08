@@ -1,4 +1,4 @@
-Proceso GestionPedidos
+Proceso GestionPedidos_CIRO
     Definir nombreCliente Como Caracter
     Definir fechaHora Como Caracter
     Definir numCajas Como Entero
@@ -18,6 +18,7 @@ Proceso GestionPedidos
 	
     Escribir '           -----ALMACENES DE GALLETAS-----'
 	Escribir '                   ---DULCE SOL---'
+	Escribir 'Apartado'
 	Escribir ''
     Escribir 'Ingrese el nombre del cliente:'
     Leer nombreCliente
@@ -26,11 +27,9 @@ Proceso GestionPedidos
     Escribir 'Ingrese el número de cajas solicitadas:'
     Leer numCajas
 	
-    // Establecer costo por caja
     costoPorCaja <- 50.00
     totalAPagar <- numCajas * costoPorCaja
 	
-    // Calcular descuentos y leyenda correspondiente
     Si numCajas >= 1 Y numCajas <= 30 Entonces
         descuento <- 0.00
         leyendaDescuento <- 'Sin descuento'
@@ -45,7 +44,7 @@ Proceso GestionPedidos
 
 	totalAPagar <- totalAPagar * (1 - descuento)
 	Escribir 'Total a pagar: $', totalAPagar
-	Escribir '¿Efectivo o tarjeta?'
+	Escribir '¿efectivo o tarjeta?'
 	Leer metodo_pago
 	
 	Mientras No pagoValido Hacer
@@ -77,10 +76,11 @@ Proceso GestionPedidos
 	
 	Escribir 'Fecha y hora de venta: ', fechaHora
 	Escribir leyendaDescuento
-	Escribir 'Datos del cliente: ', nombreCliente
+	Escribir 'Nombre del cliente: ', nombreCliente
 	Si metodo_pago = 'tarjeta' Entonces
 		Escribir 'Número de tarjeta ', banco, ':', tarjeta_num
 		Escribir 'CVV de la tarjeta: ', banco, ':', CVV
 	FinSi
-	
+	Escribir ''
+	Escribir 'Operación Realizada con Exito!'
 FinProceso
