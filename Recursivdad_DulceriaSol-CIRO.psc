@@ -22,7 +22,7 @@ Proceso GestionPedidos_CIRO
 	Escribir ''
     Escribir 'Ingrese el nombre del cliente:'
     Leer nombreCliente
-    Escribir 'Ingrese la fecha y hora de la venta (dia/mes/año):'
+    Escribir 'Ingrese la fecha y hora de la venta (dia/mes/año-Hora:Minutos):'
     Leer fechaHora
     Escribir 'Ingrese el número de cajas solicitadas:'
     Leer numCajas
